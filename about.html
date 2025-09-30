@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Project 2</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- c1: About page uses Project 1 content, trimmed for web readability -->
+  <!-- c1: About page shows a quick team overview + 2 profile cards -->
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
-  <!-- c2: masthead panel with tab-style navigation -->
+  <!-- c2: masthead with tabs; About is active -->
   <header class="site-header">
     <div class="wrap">
       <div class="masthead">
-        <h1 class="m-0">About Us</h1>
+        <h1 class="m-0">About Our Team</h1>
         <nav class="tabs">
           <a href="index.html">Home</a>
           <a href="about.html" aria-current="page">About</a>
@@ -26,67 +26,87 @@
   </header>
 
   <main id="content" class="wrap">
-    <!-- c3: intro pulled from your Project 1 opening -->
+    <!-- c3: short intro -->
     <section class="panel">
-      <h2>Peixin Yang</h2>
+      <h2>Who We Are</h2>
       <p class="lead">
-        Hi everyone—I'm Peixin Yang, a junior majoring in Computer Science at UW–Madison (transfer from Stony Brook University).
-        I’m from New York, and I’m interested in how technology shapes how people work, live, and connect.
+        We’re undergrads at UW–Madison building a hand-coded website for Project #2.
+        Our interests span human-centered computing, AI/ML, and thoughtful, accessible web design.
       </p>
     </section>
 
-    <!-- c4: academics & skills -->
+    <!-- c4: profiles grid (add more cards if your team grows) -->
     <section class="grid two">
-      <article class="panel">
-        <h3>Academic & Technical Focus</h3>
-        <ul>
-          <li>GPA 3.72; data structures, algorithms, database systems.</li>
-          <li>Languages: Java, JavaScript, C++, Python.</li>
-        </ul>
-      </article>
+      <!-- Peixin’s card -->
+      <article class="panel profile">
+        <div class="profile-head">
+          <!-- Replace the placeholder with your actual headshot at assets/images/peixin.jpg -->
+          <img class="avatar" src="assets/images/peixin.jpg" alt="Portrait of Peixin Yang" />
+          <div>
+            <h3 class="m-0">Peixin Yang</h3>
+            <p class="meta m-0">CS Junior • UW–Madison</p>
+          </div>
+        </div>
 
-      <article class="panel">
-        <h3>Why This Class</h3>
-        <p>
-          I don’t just want to code—I want to understand the bigger picture: who benefits from tech, who gets left out,
-          and how we can design responsibly in a diverse, interconnected world.
+        <p class="mt-2">
+          I’m interested in the intersection of software engineering and usability—making complex systems easier and
+          more reliable for people. I’ve worked on frontend UI fixes at Mujin and documentation tools at Fortinet.
         </p>
-      </article>
-    </section>
 
-    <!-- c5: experience cards -->
-    <section class="grid two">
-      <article class="panel">
-        <h3>Frontend Intern @ Mujin (Guangzhou)</h3>
-        <ul>
-          <li>Fixed display bugs and improved UI responsiveness.</li>
-          <li>Built tools to filter abnormal shipment data for more accurate logistics.</li>
+        <ul class="chips">
+          <li class="chip">Java</li>
+          <li class="chip">JavaScript</li>
+          <li class="chip">C++</li>
+          <li class="chip">Python</li>
+          <li class="chip">XGBoost</li>
         </ul>
       </article>
 
-      <article class="panel">
-        <h3>Intern @ Fortinet</h3>
-        <ul>
-          <li>Python tool to automatically extract keywords from documents.</li>
-          <li>Generated user-friendly HTML pages from YAML to speed up testing docs navigation.</li>
+      <!-- Teammate’s card -->
+      <article class="panel profile">
+        <div class="profile-head">
+          <!-- Replace with assets/images/teammate.jpg if you have one -->
+          <img class="avatar" src="assets/images/teammate.jpg" alt="Portrait of teammate" />
+          <div>
+            <h3 class="m-0">Xuanming Zhang</h3>
+            <p class="meta m-0">Information Science Senior • UW–Madison</p>
+          </div>
+        </div>
+
+        <p class="mt-2">
+          Welcome to my homepage. I am a senior undergraduate at UW–Madison, majoring in Information Science.
+          My work explores the potential for the digital life of artificial intelligence, focusing on Humanoid Intelligence (HI):
+          Cognitive Learning, World Interaction and Policy Simulation. I am also interested in AI application in world factors,
+          represented by quantitative finance.
+        </p>
+        <p class="mb-1">
+          I was a visiting B.S. at Stanford University, Peking University.
+        </p>
+
+        <ul class="chips">
+          <li class="chip">Humanoid Intelligence</li>
+          <li class="chip">Cognitive Learning</li>
+          <li class="chip">Policy Simulation</li>
+          <li class="chip">Quant Finance</li>
         </ul>
       </article>
     </section>
 
-    <!-- c6: interests -->
+    <!-- c5: shared values / accessibility blurb (helps fill assignment requirements) -->
     <section class="panel">
-      <h3>Current Tech Interests</h3>
-      <p>
-        Machine learning (e.g., a Rossmann sales prediction project with Linear Regression, Random Forest, and XGBoost).
-        I’m especially focused on fairness and accountability—biased data leads to biased outcomes.
-      </p>
+      <h2>What We Value</h2>
+      <blockquote>
+        We aim for simple, accessible pages with clear structure, descriptive alt text, keyboard-friendly navigation,
+        and readable color contrast—so classmates can view our site smoothly on any device.
+      </blockquote>
     </section>
   </main>
 
-  <!-- c7: consistent footer -->
+  <!-- c6: consistent footer -->
   <footer>
     <div class="wrap center"><small>© LIS 500 Project 2</small></div>
   </footer>
 </body>
 </html>
+
 

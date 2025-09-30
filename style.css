@@ -1,23 +1,22 @@
 /* =========================================================
    Project 2 — Light + Premium Gold Theme
-   - Clean white with light gold accents
-   - Includes image styling for Tech Hero portrait
+   + Profile card extras for About page
    ========================================================= */
 
 :root {
   /* Base colors */
-  --bg: #ffffff;        /* site background */
-  --paper: #ffffff;     /* panels/cards */
-  --text: #1f1f1f;      /* body text */
-  --muted: #666666;     /* secondary text */
-  --border: #e6e6e6;    /* light borders */
+  --bg: #ffffff;
+  --paper: #ffffff;
+  --text: #1f1f1f;
+  --muted: #666666;
+  --border: #e6e6e6;
 
-  /* Gold accent palette */
-  --gold: #caa246;      /* main gold */
-  --gold-dark: #b1872e; /* hover gold */
-  --gold-soft: #fdf8ec; /* pale gold wash */
+  /* Gold accents */
+  --gold: #caa246;
+  --gold-dark: #b1872e;
+  --gold-soft: #fdf8ec;
 
-  /* Layout + fx */
+  /* Layout / FX */
   --radius: 16px;
   --shadow: 0 8px 22px rgba(34, 41, 57, .08);
   --shadow-2: 0 14px 36px rgba(34, 41, 57, .12);
@@ -30,6 +29,7 @@
 /* ---------- Base ---------- */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background:
@@ -40,7 +40,6 @@ body {
   font-family: var(--sans);
   line-height: 1.65;
 }
-
 img, svg, video { max-width: 100%; height: auto; display: block; }
 
 :focus-visible {
@@ -51,17 +50,13 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 
 /* Skip link */
 .skip-link {
-  position: absolute; left: -9999px; top: auto;
-  width: 1px; height: 1px; overflow: hidden;
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
 }
 .skip-link:focus {
   position: fixed; left: 1rem; top: 1rem;
-  background: var(--paper);
-  padding: .6rem .9rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  z-index: 1000;
+  background: var(--paper); padding: .6rem .9rem;
+  border: 1px solid var(--border); border-radius: 8px;
+  box-shadow: var(--shadow); z-index: 1000;
 }
 
 /* ---------- Layout helpers ---------- */
@@ -78,26 +73,15 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 
 /* ---------- Typography ---------- */
 h1, h2, h3 { line-height: 1.25; margin: .25rem 0 .6rem; }
-h1 {
-  font-size: clamp(1.9rem, 2.4vw + 1rem, 3rem);
-  font-weight: 800;
-}
+h1 { font-size: clamp(1.9rem, 2.4vw + 1rem, 3rem); font-weight: 800; }
 h2 { font-size: clamp(1.3rem, 1.6vw + .9rem, 1.9rem); font-weight: 700; }
 h3 { font-size: 1.2rem; font-weight: 700; }
 .lead { color: var(--muted); font-size: 1.05rem; }
-a {
-  color: var(--gold-dark);
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-}
-a:hover {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-}
+a { color: var(--gold-dark); text-decoration: none; border-bottom: 2px solid transparent; }
+a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
 /* ---------- Header + Masthead ---------- */
 .site-header { padding: .75rem 0; }
-
 .masthead {
   background: linear-gradient(90deg, #fff 70%, #fff8e5);
   border: 1px solid var(--border);
@@ -105,19 +89,11 @@ a:hover {
   box-shadow: var(--shadow);
   padding: 1.2rem 1.25rem 1rem;
 }
-.masthead h1 {
-  font-weight: 800;
-  color: var(--text);
-}
+.masthead h1 { font-weight: 800; color: var(--text); }
 
-/* Tabs nav */
+/* Tabs */
 .tabs { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: .25rem; }
-.tabs a {
-  color: var(--text);
-  font-weight: 700;
-  padding: .35rem 0;
-  border-bottom: 2px solid transparent;
-}
+.tabs a { color: var(--text); font-weight: 700; padding: .35rem 0; border-bottom: 2px solid transparent; }
 .tabs a:hover { border-color: var(--gold); }
 .tabs a[aria-current="page"] { border-color: var(--gold); color: var(--gold-dark); }
 
@@ -134,69 +110,56 @@ a:hover {
 
 /* ---------- Buttons ---------- */
 .button {
-  display: inline-block;
-  font-weight: 700;
-  padding: .7rem 1rem;
-  border-radius: 999px;
-  color: #fff;
+  display: inline-block; font-weight: 700;
+  padding: .7rem 1rem; border-radius: 999px; color: #fff;
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  border: 1px solid rgba(202,162,70,.4);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(202,162,70,.4); box-shadow: var(--shadow);
   text-decoration: none;
 }
 .button:hover { filter: brightness(1.05); }
-
-/* Ghost */
-.button.ghost {
-  background: transparent;
-  color: var(--gold-dark);
-  border: 2px solid var(--gold-dark);
-}
+.button.ghost { background: transparent; color: var(--gold-dark); border: 2px solid var(--gold-dark); }
 .button.ghost:hover { background: var(--gold-soft); color: #000; }
 
 /* ---------- Lists / Quotes ---------- */
 ul, ol { padding-left: 1.2rem; }
 li { margin: .3rem 0; }
-
 blockquote {
-  margin: 1rem 0;
-  padding: .6rem 1rem;
-  border-left: 4px solid var(--gold);
-  background: var(--gold-soft);
-  border-radius: 8px;
-  color: var(--muted);
-  font-style: italic;
+  margin: 1rem 0; padding: .6rem 1rem; border-left: 4px solid var(--gold);
+  background: var(--gold-soft); border-radius: 8px; color: var(--muted); font-style: italic;
 }
 
 /* ---------- Tables ---------- */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  border: 1px solid var(--border);
-  background: var(--paper);
-  border-radius: 12px;
-  overflow: hidden;
+  width: 100%; border-collapse: collapse; margin: 1rem 0;
+  border: 1px solid var(--border); background: var(--paper);
+  border-radius: 12px; overflow: hidden;
 }
 th, td { padding: .75rem .9rem; border-bottom: 1px solid var(--border); }
-th {
-  text-align: left;
-  background: #fff8e5; /* pale gold header */
-  font-weight: 700;
+th { text-align: left; background: #fff8e5; font-weight: 700; }
+
+/* ---------- Images / Profiles ---------- */
+img.rounded { border-radius: 12px; border: 4px solid var(--gold-soft); box-shadow: var(--shadow); }
+
+.profile-head { display: flex; align-items: center; gap: .9rem; }
+.avatar {
+  width: 72px; height: 72px; object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold-soft);
+  box-shadow: 0 4px 14px rgba(34,41,57,.10);
+  background: #fff;
 }
 
-/* ---------- Images ---------- */
-img.rounded {
-  border-radius: 12px;
-  border: 4px solid var(--gold-soft);
-  box-shadow: var(--shadow);
-}
-figure { margin: 1rem 0; }
-figcaption {
-  text-align: center;
+.meta { color: var(--muted); font-size: .95rem; }
+
+/* Pill tags */
+.chips { list-style: none; padding: 0; margin: .5rem 0 0; display: flex; gap: .5rem; flex-wrap: wrap; }
+.chip {
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fffdf7;
+  color: #7a5b16;
   font-size: .9rem;
-  color: var(--muted);
-  margin-top: .4rem;
 }
 
 /* ---------- Footer ---------- */
@@ -206,6 +169,7 @@ footer {
   color: var(--muted);
   background: linear-gradient(0deg, #fff8e5 0%, transparent 70%);
 }
+
 
 
 

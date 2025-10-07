@@ -3,71 +3,100 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech Hero — Dr. Timnit Gebru</title>
+  <title>Tech Heroes — Project 2</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- h1: Tech Hero page with image added -->
+  <!-- h0: Tech Hero page — now includes Dr. Timnit Gebru and Alan Turing -->
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
-  <!-- masthead with tabs; Tech Hero active -->
   <header class="site-header">
     <div class="wrap">
       <div class="masthead">
-        <h1 class="m-0">Tech Hero</h1>
+        <h1 class="m-0">Tech Heroes</h1>
         <nav class="tabs">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="resources.html">Resources</a>
-          <a href="hero.html" aria-current="page">Tech Hero</a>
+          <a href="hero.html" aria-current="page">Tech Heroes</a>
         </nav>
       </div>
     </div>
   </header>
 
   <main id="content" class="wrap">
-    <article class="panel">
-      <h2 class="m-0">Dr. Timnit Gebru</h2>
-      <p class="lead mt-1">
-        Computer scientist and advocate for ethical, accountable AI—pushing the field to confront bias, labor, and power.
-      </p>
 
-      <!-- IMAGE of Tech Hero -->
-      <figure class="mt-2 mb-2">
-        <img src="assets/images/dr-timnit-gebru.jpg" alt="Dr. Timnit Gebru" class="rounded">
-        <figcaption class="lead">Dr. Timnit Gebru — Advocate for ethical, accountable AI</figcaption>
-      </figure>
+    <!-- ===== HERO 1: Timnit Gebru ===== -->
+    <article class="panel hero-card">
+      <div class="hero-layout">
+        <figure>
+          <img src="assets/images/dr-timnit-gebru.jpg" alt="Dr. Timnit Gebru" class="hero-img" />
+          <figcaption>Dr. Timnit Gebru — Advocate for ethical, accountable AI</figcaption>
+        </figure>
 
-      <p>
-        Dr. Timnit Gebru is known for foundational work on algorithmic bias and for championing the people most affected by AI systems.
-        As a researcher and the founder of the Distributed AI Research Institute (DAIR), she centers impacted communities in the study of data and models.
-        Her scholarship on facial analysis disparities and documentation practices helped move “AI ethics” from an afterthought to a core engineering concern.
-      </p>
+        <div class="hero-text">
+          <h2>Dr. Timnit Gebru</h2>
+          <p class="lead">
+            Computer scientist and advocate for ethical, accountable AI—pushing the field to confront bias, labor, and power.
+          </p>
+          <p>
+            Dr. Timnit Gebru is known for foundational work on algorithmic bias and for championing the people most affected by AI systems.
+            As founder of the Distributed AI Research Institute (DAIR), she centers impacted communities in the study of data and models.
+            Her research on facial-analysis disparities and documentation practices helped make “AI ethics” an engineering standard.
+          </p>
+          <p>
+            Gebru connects AI to questions of labor, environment, and corporate accountability.
+            She teaches future engineers that equity is not optional—it’s a quality attribute of responsible systems.
+          </p>
 
-      <p>
-        Gebru challenges norms in at least three ways. First, she treats datasets as sociotechnical artifacts—asking who is represented, who is missing, and who bears the risk.
-        Second, she connects AI to labor and environment: models depend on large amounts of human annotation and energy; costs and harms are unevenly distributed.
-        Third, she shows how organizational incentives shape what gets built. Accountability can’t be outsourced to a single “ethics” role—it must live in requirements, reviews, and deployment standards.
-      </p>
-
-      <p>
-        For students and new engineers, Gebru’s example is practical: learn the math and code, but also trace the whole pipeline—data collection, labeling, training, evaluation, and real-world impact.
-        Document assumptions; measure harms; widen the review circle; and be willing to pause when evidence of harm is strong.
-        In other words, equity is an engineering quality attribute.
-      </p>
-
-      <h3>Learn More</h3>
-      <ul>
-        <li><a href="https://www.dair-institute.org/">Distributed AI Research Institute (DAIR)</a></li>
-        <li><a href="https://scholar.google.com/scholar?q=Timnit+Gebru">Selected publications</a></li>
-        <li><a href="https://www.youtube.com/results?search_query=Timnit+Gebru+talk">Talks & interviews</a></li>
-      </ul>
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="https://www.dair-institute.org/">Distributed AI Research Institute (DAIR)</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=Timnit+Gebru">Selected Publications</a></li>
+            <li><a href="https://www.youtube.com/results?search_query=Timnit+Gebru+talk">Talks & Interviews</a></li>
+          </ul>
+        </div>
+      </div>
     </article>
+
+    <!-- ===== HERO 2: Alan Turing ===== -->
+    <article class="panel hero-card">
+      <div class="hero-layout reverse">
+        <figure>
+          <img src="assets/images/alan-turing.jpg" alt="Alan Turing" class="hero-img" />
+          <figcaption>Alan Turing — Pioneer of modern computing</figcaption>
+        </figure>
+
+        <div class="hero-text">
+          <h2>Alan Turing</h2>
+          <p class="lead">
+            Mathematician, logician, and cryptanalyst whose vision laid the foundation for computer science and artificial intelligence.
+          </p>
+          <p>
+            Alan Turing’s 1936 paper, <em>On Computable Numbers</em>, introduced the concept of the Turing Machine—a theoretical model of computation
+            that underpins modern computer design. During World War II, he led efforts at Bletchley Park to crack the Enigma code, helping shorten the war.
+          </p>
+          <p>
+            Beyond his scientific brilliance, Turing’s life reminds us of the human dimension of technology.
+            Persecuted for his identity, he represents the need for inclusion, empathy, and justice in science and engineering communities.
+          </p>
+
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing — Wikipedia</a></li>
+            <li><a href="https://www.britannica.com/biography/Alan-Turing">Britannica Biography</a></li>
+            <li><a href="https://www.turingarchive.org/">Turing Digital Archive</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
   </main>
 
   <footer>
-    <div class="wrap center"><small>© LIS 500 Project 2</small></div>
+    <div class="wrap center"><small>© LIS 500 Project 2 — Tech Heroes Page</small></div>
   </footer>
 </body>
 </html>
+
 
